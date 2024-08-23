@@ -53,3 +53,12 @@ conda install -c bioconda samtools
 cd RNAseq/Reference
 bwa index reference_chr22.fa
 samtools faidx reference_chr22.fa
+
+# Use FastQC to assess the quality of each fastq file
+cd /RNAseq/RAWDATA/Sequencing data/Normal
+fastqc *.fastq
+# Generate a MultiQC report to summarize the FastQC results
+multiqc .
+
+and repeat for Cancer samples 
+
