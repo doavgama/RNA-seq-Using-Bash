@@ -59,6 +59,16 @@ cd /RNAseq/RAWDATA/Sequencing data/Normal
 fastqc *.fastq
 # Generate a MultiQC report to summarize the FastQC results
 multiqc .
+and repeat for Cancer samples 
 
-# and repeat for Cancer samples 
+#Error trimming to enhance the quality 
+
+-install tool needed
+conda install -c bioconda cutadapt 
+
+-code : 
+cutadapt -u 20 -o trimmed_read1.fastq -p trimmed_read2.fastq     normal_sample_1.read1.fastq normal_sample_1.read2.fastq
+
+
+
 
